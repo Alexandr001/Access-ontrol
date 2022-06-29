@@ -1,0 +1,7 @@
+C:\Users\Adilya\RiderProjects\AccessСontrol\AccessСontrol\bin\Debug\AccessСontrol.exe
+C:\Users\Adilya\RiderProjects\AccessСontrol\AccessСontrol\bin\Debug\AccessСontrol.pdb
+C:\Users\Adilya\RiderProjects\AccessСontrol\AccessСontrol\obj\Debug\AccessСontrol.csproj.AssemblyReference.cache
+C:\Users\Adilya\RiderProjects\AccessСontrol\AccessСontrol\obj\Debug\AccessСontrol.csproj.SuggestedBindingRedirects.cache
+C:\Users\Adilya\RiderProjects\AccessСontrol\AccessСontrol\obj\Debug\AccessСontrol.csproj.CoreCompileInputs.cache
+C:\Users\Adilya\RiderProjects\AccessСontrol\AccessСontrol\obj\Debug\AccessСontrol.exe
+C:\Users\Adilya\RiderProjects\AccessСontrol\AccessСontrol\obj\Debug\AccessСontrol.pdb
