@@ -1,4 +1,4 @@
-﻿namespace AccessСontrol
+﻿namespace AccessСontrol.AdminScripts
 {
 	public class AdminModel
 	{

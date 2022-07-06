@@ -2,15 +2,14 @@
 
 namespace AccessСontrol
 {
-	internal class Program
+	public class Program
 	{
 		public static void Main(string[] args)
 		{
 			Console.WriteLine("Введите имя пользователя и пароль:");
 
-			IdentificationUser ident = new IdentificationUser();
+			Identification ident = new Identification();
 			ident.Ident(Console.ReadLine(), Console.ReadLine());
-			ident.CreateFolder();
 
 			User user = new User();
 			user.Test();

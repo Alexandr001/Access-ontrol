@@ -1,32 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using AccessСontrol.AdminScripts;
 using AccessСontrol.Enam;
+using AccessСontrol.UserScripts;
+
 
 namespace AccessСontrol
 {
-	public class IdentificationUser
+	public class Identification
 	{
-		private readonly Repository _repository = new Repository();
-		private UserModel _userModel;
-		
 		public void Ident(string loginUser, string passwordUser)
 		{
 			if (CheckLogin(loginUser) && CheckPassword(loginUser, passwordUser)) {
-
-				_userModel = new UserModel(loginUser,
-				                           _repository.userCollection[loginUser],
-				                           loginUser,
-				                           _repository.accessCollection[loginUser]);
-				Console.WriteLine($"Вы вошли как: {loginUser}\n" + $"C правами: {_repository.userCollection[loginUser]}");
+				if (RepositoryUser.USER_COLLECTION[loginUser] == TypeUser.USER) {
+					UserModel userModel = new UserModel(loginUser);
+				} else if (RepositoryUser.USER_COLLECTION[loginUser] == TypeUser.ADMIN) {
+					Administrator administrator = new Administrator();
+				}
+				Console.WriteLine($"Вы вошли как: {loginUser}\n" + $"C правами: {RepositoryUser.USER_COLLECTION[loginUser]}");
 				return;
 			}
-			Console.WriteLine($"Неправильное имя пользователя или пароль!");
+			Console.WriteLine("Неправильное имя пользователя или пароль!");
 		}
-		public void CreateFolder() => Directory.CreateDirectory(UserModel.HomeFolder);
 		private bool CheckLogin(string login)
 		{
-			foreach (KeyValuePair<string, TypeUser> id in _repository.userCollection) {
+			foreach (KeyValuePair<string, TypeUser> id in RepositoryUser.USER_COLLECTION) {
 				if (id.Key == login) {
 					return true;
 				}
@@ -35,7 +34,7 @@ namespace AccessСontrol
 		}
 		private bool CheckPassword(string login, string pass)
 		{
-			return _repository.passwordCollection[login] == pass;
+			return RepositoryUser.PASSWORD_COLLECTION[login] == pass;
 		}
 	}
 }

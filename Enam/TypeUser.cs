@@ -1,4 +1,4 @@
-﻿namespace AccessСontrol
+﻿namespace AccessСontrol.Enam
 {
 	public enum TypeUser
 	{

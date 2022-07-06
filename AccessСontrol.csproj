@@ -39,16 +39,18 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Administrator.cs" />
+        <Compile Include="AdminScripts\Administrator.cs" />
+        <Compile Include="AdminScripts\AdminModel.cs" />
+        <Compile Include="Enam\AccessAdmin.cs" />
         <Compile Include="Enam\AccessUser.cs" />
         <Compile Include="Enam\TypeUser.cs" />
         <Compile Include="File.cs" />
-        <Compile Include="IdentificationUser.cs" />
-        <Compile Include="Model.cs" />
+        <Compile Include="Identification.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
-        <Compile Include="Repository.cs" />
-        <Compile Include="User.cs" />
+        <Compile Include="UserScripts\RepositoryUser.cs" />
+        <Compile Include="UserScripts\User.cs" />
+        <Compile Include="UserScripts\UserModel.cs" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using AccessСontrol.Enam;
 
-namespace AccessСontrol
+namespace AccessСontrol.UserScripts
 {
 	public class UserModel
 	{
@@ -9,15 +10,19 @@ namespace AccessСontrol
 
 		public static TypeUser TypeUser { get; private set; }
 		public static string HomeFolder { get; private set; }
-		public static List<AccessUser> AccessUser { get; private set; }
+		public static List<int> AccessUser { get; set; }
 		public static string LoginUser { get; private set; }
 
-		public UserModel(string loginUser, TypeUser typeUser, string homeFolder, List<AccessUser> accessUser)
+		public UserModel(string loginUser)
 		{
 			LoginUser = loginUser;
-			TypeUser = typeUser;
-			HomeFolder = PATH_PROJECT + homeFolder + "/";
-			AccessUser = accessUser;
+			TypeUser = RepositoryUser.USER_COLLECTION[loginUser];
+			HomeFolder = PATH_PROJECT + loginUser + "/";
+			AccessUser = RepositoryUser.ACCESS_COLLECTION[loginUser];
+			
+			CreateFolder();
 		}
+		
+		private void CreateFolder() => Directory.CreateDirectory(UserModel.HomeFolder);
 	}
 }
