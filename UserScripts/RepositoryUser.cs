@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using AccessСontrol.Enam;
 
 namespace AccessСontrol
 {
-	public class Repository
+	public class RepositoryUser
 	{
 		public readonly Dictionary<string, TypeUser> userCollection = new Dictionary<string, TypeUser>() {
 				["Alexander"] = TypeUser.USER,

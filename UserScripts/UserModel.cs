@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using AccessСontrol.Enam;
 
 namespace AccessСontrol
 {
-	public class Model
+	public class UserModel
 	{
 		private const string PATH_PROJECT = "C:/Users/Adilya/RiderProjects/AccessСontrol/User/";
 
@@ -11,7 +12,7 @@ namespace AccessСontrol
 		public static List<AccessUser> AccessUser { get; private set; }
 		public static string LoginUser { get; private set; }
 
-		public Model(string loginUser, TypeUser typeUser, string homeFolder, List<AccessUser> accessUser)
+		public UserModel(string loginUser, TypeUser typeUser, string homeFolder, List<AccessUser> accessUser)
 		{
 			LoginUser = loginUser;
 			TypeUser = typeUser;
